@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/nunito');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  min-height:100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  /* background-color:  #E5E5E5; */
+  font-family: "Nunito", 'Times New Roman', Times, serif;
+    
+}
+
+[data-target="#mainMenu"] {
+  position: absolute;
+  z-index: 999;
+}
+.navbar{
+  margin: 0 10%;
+}
+#mainMenu li > a {
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  z-index: 1;
+  color: #000000;
+  padding-top: 1%;
+  text-align: center;
+}
+
+.main-header.fixed-nav #mainMenu li > a {
+  color: #FF831F;
+  text-decoration: none;
+}
+#mainMenu a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: #ffffff;
+  width: 125px;
+  height: 48px;
+  text-align: center;
+  background-color: #FF831F;
+  padding: 1%; 
+  border-radius: 8px;
+}
+#mainMenu a.button:hover{
+  background-color: #ffffff;
+  color: #FF831F;
+  border: 2px solid #FF831F;
+  /* font-size: 18px; */
+  font-weight: bold;
+  /* padding: 0; */
+}
+
+#mainMenu li{
+  margin-right: 60px;
+}
+
+#mainMenu li > a::before {
+  position: absolute;
+  content: "";
+  background: #FF831F;
+  bottom: -18px;
+  transform: scale(0, 0);
+  z-index: -1;
+  -webkit-transition: transform 0.8s ease-in-back;
+  transition-duration:0.8s ease-in-back;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  left:calc(50% - 8px);
+}
+
+
+
+#mainMenu li > a:hover::before,
+#mainMenu li > a.active::before {
+  content: "";
+  position: absolute;
+ 
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  left:calc(50% - 8px);
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.main-header.fixed-nav #mainMenu li > a::before {
+  background: #000;
+}
+
+.main-header {
+  position:relative;
+  top: -33px;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 168px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.main-header.fixed-nav {
+  top: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.09);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.main-header.fixed-nav .navbar-brand > img:last-of-type {
+  display: block;
+}
+
+.main-header.fixed-nav .navbar-brand > img:first-of-type {
+  display: none;
+}
+.navbar-brand {
+  color: #fff;
+}
+.main-header .navbar-brand img {
+
+  width: 176px;
+  height: 158px;
+  left: 62px;
+  top: 10px;
+}
+
+footer {
+    /* padding: 2% 7%; */
+    color: #ffffff;
+    background-color: #FF831F
+}
+
+.footer{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+}
+
+.footer-social{
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-social img{
+  width: 208px;
+  height: 208px;
+}
+footer ul>li {
+    list-style: none;
+}
+
+
+footer hr {
+    border-width: 3px
+}
+footer .social{
+  margin: 10% auto;
+  justify-content: center;
+  margin-top: 10%;
+}
+.social_footer_ul {
+  display:flex;
+  list-style-type:none;
+  
+}
+.social_footer_ul li {
+  /* padding: 20px 28px 0 20px;  */
+  margin-top: 10%;
+  /* margin-right: 20px; */
+  margin-left: 30px;
+}
+.social_footer_ul li a {
+  color:#FF831F;
+  /* border:1px solid #ffffff;  */
+  padding:8px;
+  border-radius:50%;
+  background-color: #ffffff;
+  font-size: 24px;
+}
+.social_footer_ul li i {
+  width:36px; 
+  height:36px; 
+  text-align:center;
+}
+.social_footer_ul li a:hover {
+  color:#ffffff;
+  border:2px solid #ffffff; 
+
+  background-color: #FF831F;
+}
+
+footer .contact{
+  margin: 5% 0 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  /* text-align: left; */
+}
+footer .contact p{
+  font-size: 48px;
+  font-family: 'Nunito' sans-serif;
+  font-style: normal;
+  /* font-weight: bold; */
+  line-height: 65px
+}
+footer .contact .row{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8% 0;
+  margin-left: -6%;
+}
+
+footer .contact .row .services li{
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Nunito', sans-serif;
+  line-height: 2.5rem;
+}
+
+footer .heading ul {
+  margin-top: 5%;
+}
+
+footer .heading {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+footer .addr li{
+  display: flex;
+  flex-direction: row;
+  margin-left: -10%;
+}
+footer .addr li .iconify{
+  color: white;
+  font-size: 24px;
+  margin: 0 3% 0 0;
+
+}
+footer .addr li p{
+  font-size: 18px;
+  font-weight: normal;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.5rem;
+  
+}
+
+footer hr {
+  border: 1px solid rgba(255, 255, 255, .3);
+  width: 100%;
+}
+
+footer .copyright{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 15%;
+}
+
+footer .policy{
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.courses,.course_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses_header{
+    padding-top: 2rem !important;
+    color: #FF831F;
+}
+.courses .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.courses_card{
+    background-color: white;
+    height: 400px;
+    width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.courses_card img{
+    width: 100%;
+    height: 80%;
+}
+.course_title h1{
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 1rem;
+}
+.course_title p{
+    color: #FF831F;
+}
+.register-btn{
+    background: #FF831F;
+    color: #FFF;
+    margin: 3rem;
+}
+/* Course content styles here */
+.courses_content_header{
+    padding-top: 2rem;
+    font-weight: bold;
+}
+.courses_content_header_sub{
+    font-weight: bold;
+}
+.course_content_top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.course_content_top img{
+    padding: 3rem;
+}
+.course_content_top p{
+    padding: 1rem;
+    text-align: justify;
+}
+.cousre_content_bottom h1{
+    font-weight: 600;
+    text-align: center;
+}
+.curriculum_content{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+.curriculum_content.videography{
+    display: block;   
+}
+.videography p{
+    font-size: 25px;
+}
+.curriculum_content1{
+    flex: .5;
+}
+.curriculum_content2{
+    flex: .5;
+}
+.cousre_content_bottom .line{
+border-bottom: 3px solid #FF831F;
+width: 20% !important;
+margin: 0 auto ;
+margin-top: -.5rem;
+margin-bottom: 1.5rem;
+
+}
+/* .cousre_content_bottom .robotics_line{
+    border-bottom: 3px solid #FF831F;
+width: 20% !important;
+margin: 0 auto ;
+margin-top: -.5rem;
+margin-bottom: 1.5rem;
+} */
+.curriculum_content h3{
+    font-weight: 600;
+    text-align: center;
+    
+}
+@media screen and (max-width: 560px) {
+    .courses .container{
+     flex-direction: column;
+    }
+    .courses_card{
+        width: 90%;
+        text-align: center;
+    }
+    .course_content_top img{
+        object-fit: contain;
+    }
+}
