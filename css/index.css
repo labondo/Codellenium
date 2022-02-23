@@ -877,11 +877,8 @@ footer .policy{
 
 /* main-header end */
 @media (max-width: 991px) {
-  /*header starts*/
 
   .main-header .navbar-brand img {
-    /* position: absolute; */
-    /* width: 30%; */
     min-width: 40%;
   }
 
@@ -982,4 +979,129 @@ footer .policy{
   }
 
   /*header ends*/
+}
+
+
+/* --------------------Media Queries------------- */
+@media (max-width: 991px){
+  .main-header .navbar-brand img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .main-header .navbar {
+    margin: 0 4%;
+}
+
+
+  header, header.sticky{
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header .logo{
+    width: 18%;
+    float: left;   
+  }
+
+  header .navigations{
+    display: none;
+  }
+
+  .menuToggle{
+    z-index: 1;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    background: url(../assets/Logo/menuicon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .menuToggle.active{
+    background: url(../assets/Logo/close-icon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  header .navigations.active{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #121116f8;
+  }
+
+  header .navigations li{
+    margin-left: 0;
+  }
+
+  header .navigations li a{
+    color: #fff; 
+    font-size: 1.2em;
+  }
+
+  header .navigations li a.active {
+    font-weight: normal;
+    color: #fff;
+  } 
+
+  .navigations .hr {
+    width: 80%;
+    color: #EDB60D;
+    border: 0.5px solid #EDB60D;
+    margin: 3%;
+  } 
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+  header .logo {
+    width: 40%;
+  }
+
+
+  .menuToggle {
+    width: 150px;
+    height: 40px;
+    
+  }
+  .titleText h2{
+    font-size: 2em;
+    margin-top: -5%;
+  }
+
+  header .navigations li a{
+    font-size: 1em;
+  }
+
+  .navigations .hr {
+    width: 75%;
+    margin: 5% 0;
+  }
+
+  header .navigations li a.active {
+    font-weight: normal;
+    color: #fff;
+  } 
+
+
+  section{
+    padding: 25% 4% 0 4%;
+  }
+
+ 
 }
