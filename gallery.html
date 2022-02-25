@@ -31,23 +31,26 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg main-nav px-0">
           <a class="navbar-brand" href="index.html">
-            <img src="./images/logoo.png" alt="rajeshdas.com">
+            <img src="./images/logoo.png" alt="labondohub.com">
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="icon-bar icon-bar-1"></span>
-                          <span class="icon-bar icon-bar-2"></span>
-                          <span class="icon-bar icon-bar-3"></span>
-                      </button>
+          <div class="menuToggle" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu();">
+            <label for="check">
+              <input type="checkbox" id="check"/> 
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>                      
           <div class="collapse navbar-collapse" id="mainMenu">
-            <ul class="navbar-nav ml-auto ">
+            <ul class="navbar-nav ml-auto navigations">
               <li>
                 <a href="index.html" class="active-first">Home</a>
               </li>
               <li>
-                <a href="#about">About Us</a>
+                <a href="about-us.html">About Us</a>
               </li>
               <li>
-                <a href="#courses">Courses</a>
+                <a href="courses.html">Courses</a>
               </li>
               <li>
                 <a href="gallery.html" class="active">Gallery</a>
@@ -58,7 +61,6 @@
               
             </ul>
             <a href="register.html" class="button">Register</a>
-                      
           </div>
         </nav>
       </div>
@@ -66,7 +68,7 @@
 
 
     <main>
-      <section class="main-section">
+      <section class="main-section mt-5">
         <div class="top-text">
           <p class="topmost-text"><strong>Picture Speaks</strong></p>
           <p class="sub-text">Excerpts From Codellenium Academy</p>
@@ -240,33 +242,37 @@
       </section>
 
     </main>
+
+
+    
+    <!------------ Footer-Section ---------->
     <footer id="contact">
       <div class=" footer">
         <div class="row mb-4 ">
-          <div class="col-md-4">
+          <!--- Social-media --->
+          <div class="col-md-4 col-sm">
             <div class="footer-social">
               <div class="">
                 <img src="./images/logob.png" alt="">
-              </div>
-                    
+              </div>  
               <div class="social ">
-                <ul class="social_footer_ul">
+                <ul class="social_footer">
                   <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                   <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                  
                   <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                  
                 </ul>
               </div>
             </div>
           </div>
-            
+          <!--- Services --->
           <div class="col-md-6 contact">
             <p>Get In Touch</p>
             <div class="row">
-              <div class="col-md-6 col-sm-4 col-xs-4">
+              <div class="col-md-4 col-sm-4 col-xs-4">
                 <!-- <h5 class="heading">Courses</h5> -->
                 <ul class="services">
-                  <h5 class="heading">Courses</h5>
+                  <h5 class="heading mb-3">Courses</h5>
                   <li>Web Design & Development </li>
                   <li>Robtics</li>
                   <li>Artificial Intelligence</li>
@@ -275,11 +281,14 @@
                   <li>Videography</li>
                 </ul>
               </div>
+
+              <hr>
                 
-              <div class="col-md-6 col-sm-4 col-xs-4">
+              <!------ Address ------->
+              <div class="col-md-4 col-sm-4 col-xs-4">
                 <!-- <h5 class="heading">Contact</h5> -->
                 <ul class="addr">
-                  <h5 class="heading">Contact</h5>
+                  <h5 class="heading mb-3">Contact</h5>
                   <li>
                     <span class="iconify" data-icon="carbon:location-filled" ></span>
                     <p>#P12 Fire Service Plazza, Gimba Road <br> Jimeta, Yola, Adamawa, <br> Nigeria.</p>
@@ -293,24 +302,28 @@
                     <p>+23407036624510</p>
                   </li>      
                 </ul>
+
+        
+                
               </div>
 
             </div>
-          </div>
-            
+          </div>            
         </div>
-        <div class="divider mb-4"> </div>
+
+        
         <hr>
+        <!--- Privacy Policy--->
         <div class="row mx-5" >
-          <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="col-md-6 col-sm">
             <div class="pull-left copyright">
               <p><i class="fa fa-copyright"></i> 2022 Discovery Hub Labondo</p>
             </div>
           </div>
-          <div class="col-md-6 col-sm-6 col-xs-6">
-            <div class=" row pull-right ml-5 d-flex policy justify-content-center">
-              <div class="mx-5">Terms of Use</div>
-              <div class="mx-5">Privacy Policy</div>
+          <div class="col-md-6 col-sm">
+            <div class="policy">
+              <div class="list" >Terms of Use</div>
+              <div class="list" >Privacy Policy</div>
             </div>
           </div>
         </div>
@@ -321,7 +334,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script type="text/javascript">
@@ -354,6 +366,25 @@
           $('.modal-body').html($('#img-container').find('a[id="Image ' + number + '"]').parent('div').html());
           $('.modal-title').text('Image ' + number);
       });
+
+      window.addEventListener('scroll', function(){
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigations = document.querySelector('.navigations');
+        menuToggle.classList   .toggle('active');
+        navigations.classList   .toggle('active');
+      }
+      AOS.init({
+        duration: 1200,
+      });
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
     </script>
     
   </body>
